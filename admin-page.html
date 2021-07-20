@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Songify</title>
+</head>
+<body>
+    <header>
+      <div id="navbarReplace">
+        <nav class="navbar navbar-expand-lg navbar-dark navbarColor" id="test">
+          <a class="navbar-brand text-light" href="index.html">Songify</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navIconColor"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-light" href="index.html">Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="contact-page.html">Contacto</a>
+              </li>
+            </ul>
+              <div class="signIn-signUp-btn" id="signInAnSignUp">
+                <a class="btn my-2 my-sm-0 button-primary" type="submit" href="signup-page.html">Registrarse</a>
+                <a class="btn my-2 my-sm-0 button-secondary" type="submit" href="login.html">Iniciar sesión</a>
+              </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  <main class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="title-btn-container d-flex flex-column">
+          <h1 class="align-self-center my-3 text-center">PANEL DE ADMINISTRACIÓN</h1>
+          <button class="btn button-primary btn-song-modal mb-3" data-toggle="modal" data-target="#addSongModalForm">Añadir canción</button>
+        </div>
+        <section>
+          <table id="tableList" class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Título</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Álbum</th>
+                <th scope="col">Artista</th>
+                <th scope="col">Categoría</th>
+              </tr>
+            </thead>
+            <tbody id="songList">
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" tabindex="-1" id="addSongModalForm">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">AÑADE UNA CANCIÓN</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="my-3" id="song-form">
+          <div class="form-group">
+            <label for="songTtile">Título</label>
+            <input type="text" class="form-control" id="songTtile" name="title">
+          </div>
+          <div class="form-group">
+            <label for="songDuration">Duración</label>
+            <input type="text" class="form-control" id="songDuration" name="duration">
+          </div>
+          <div class="form-group">
+            <label for="songAlbum">Álbum</label>
+            <input type="text" class="form-control" id="songAlbum" name="album">
+          </div>
+          <div class="form-group">
+            <label for="songArtist">Artista</label>
+            <input type="text" class="form-control" id="songArtist" name="artist">
+          </div>
+          <div class="form-group">
+            <label for="songImage">Añade una imagen</label>
+            <input type="text" class="form-control" id="songImage" name="image">
+          </div>
+          <div class="dropdown d-flex flex-column m-0 m-auto pb-4" id="dropdownOps">
+            <label for="songCategory" class="dropdownCategory">Seleccionar categoría</label>
+            <select  aria-labelledby="dropdownMenuButton" id="songCategory">
+              <option class="dropdown-item"> </option>
+              <option class="dropdown-item">Pop</option>
+              <option class="dropdown-item">Rock</option>
+              <option class="dropdown-item">Punk</option>
+              <option class="dropdown-item">Otro</option>
+            </select>
+          </div>
+          <div class="highlighted-options d-flex flex-column m-0 m-auto pb-4" id="highlighted-options-id">
+            <label for="songHighlighted" class="dropdownCategory">¿Deseas destacar esta canción?</label>
+            <select  aria-labelledby="dropdownMenuButton" id="songHighlighted">
+              <option class="dropdown-item"> </option>
+              <option class="dropdown-item">Si</option>
+              <option class="dropdown-item">No</option>
+            </select>
+          </div>
+          <button type="submit" class="button-primary btn btn-block" id="btn-form-properties">Guardar</button>
+        </form>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn button-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="deleteSongModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="mt-3 mb-0 text-center">¿Estas seguro que deseas eliminar la canción?</p>
+        <p class="mb-3 text-center">Esta acción no se puede revertir.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn button-primary" data-dismiss="modal" id="deleteBtnSongModal">Eliminar</button>
+        <button type="button" class="btn button-secondary" data-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="./js/pagina-admin.js"></script>
+  <!-- <script src="./js/song-categories.js"></script> -->
+  <script src="./js/admin-form-categories.js"></script>
+  <script src="./js/validaciones.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+      <div id="navbarReplace" class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbarColor" id="test">
+          <a class="navbar-brand text-light" href="index.html">Songify</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navIconColor"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link text-light" href="index.html">Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">Sobre nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="contact-page.html">Contacto</a>
+              </li>
+            </ul>
+              <div class="signIn-signUp-btn" id="signInAnSignUp">
+                <a class="btn my-2 my-sm-0 button-primary" href="signup-page.html">Registrarse</a>
+                <a class="btn my-2 my-sm-0 button-secondary" href="login.html">Iniciar sesión</a>
+              </div>
+          </div>
+        </nav>
+      </div>
+  </header>
+  
+  <div class="form-container container mt-5" id="formContainerId">
+    <div class="row d-flex justify-content-center">
+      <div class="col-6">
+        <h1 class="form-signup-title mt-3 text-center">Registro</h1>
+        <form class="mt-3 d-flex flex-column align-content-center" id="signupForm">
+          <div class="form-group">
+            <label for="userNameInput">Nombre de usuario</label>
+            <input type="text" class="form-control" id="userNameInputsignup">
+          </div>
+          <div class="form-group">
+            <label for="userEmailInput">Dirección de email</label>
+            <input type="email" class="form-control" id="userEmailInputsignup">
+          </div>
+          <div class="form-group">
+            <label for="userPasswordInput">Contraseña</label>
+            <input type="password" class="form-control" id="userPasswordInputsignup">
+          </div>
+          <div class="form-group">
+            <label for="userRepeatPasswordInput">Repetir contraseña</label>
+            <input type="password" class="form-control" id="userRepeatPasswordInputsignup">
+          </div>
+          <small class="form-text mb-3 text-center">Nunca compartiremos tus datos con terceros.</small>
+          <button type="submit" class="btn button-primary" id="signupBtnSubmit" data-toggle="modal" data-target="#myModal">Ingresar</button>
+        </form>
+        <div class="mt-4 text-center" id="signupErrorMsg"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="text-center mt-3">Te registraste correctamente</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn button-primary m-auto" data-dismiss="modal">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="./js/validaciones.js"></script>
+  <script src="./js/signup.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

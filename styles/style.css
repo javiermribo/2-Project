@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Antonio', sans-serif;
+  background-color: #F2F2F0;
+}
+
+.container-video {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-video-text {
+  position: absolute;
+  top: 40%;
+}
+
+.cover-title {
+  color: #F25244;
+  font-size: 14vw;
+  font-weight: 600;
+}
+
+.sub-text {
+  font-weight: 100;
+}
+
+.play-icon {
+  color: white;
+  font-size: 48px;
+}
+
+.navbarColor {
+  background-color: #0C1526;
+}
+
+.navbar-toggler-icon,
+.navbar-toggler {
+  color: white;
+}
+
+.button-primary {
+  color: #212529;
+  background-color: #ff4433;
+  border: none;
+}
+
+.button-primary:hover {
+  color: #212529;
+  background-color: #ff1f0a;
+  border: none;
+}
+
+.button-secondary {
+  color: #212529;
+  background-color: #F27166;
+  border: none;
+}
+
+.button-secondary:hover {
+  color: #212529;
+  background-color: #f05143;
+  border: none;
+}
+
+.button-primary:disabled {
+  background-color: #e2948d;
+  border: none;
+}
+
+.songDetails {
+  background-color: #20314f;
+}
+
+.jumbotronImgBackground {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jumbotronStyler, .songDetails {
+  border-radius: 0px;
+}
+
+.background-comment-style {
+  width: fit-content;
+  border-radius: 8px;
+  background-color:#212529;
+  color: white;
+}
+
+.userComments {
+  width: 80vw;
+}
+
+.songCoverImg {
+  background-color: transparent;
+  border: 0px;
+  border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  .cover-title {
+  color: #F25244;
+  font-size: 16vw;
+  font-weight: 600;
+}
+
+.sub-text {
+  font-size: 4vw;
+  font-weight: 100;
+}
+
+.overlay-video-text {
+  position: absolute;
+  top: 50%;
+}
+
+table {
+  width:100%;
+}
+
+thead {
+  display: none;
+}
+
+tbody td {
+  display: block;
+  text-align:center;
+}
+
+tbody td:before {
+  margin: 8px auto;
+  font-weight:bold;
+  font-size:1.3em;
+  display: block;
+}
+
+td:nth-of-type(1):before { 
+  content: "ID";
+  background-color:gainsboro;
+  width: 100%;
+}
+td:nth-of-type(2):before { content: "Imagen";}
+td:nth-of-type(3):before { content: "Título";}
+td:nth-of-type(4):before { content: "Duración";}
+td:nth-of-type(5):before { content: "Álbum";}
+td:nth-of-type(6):before { content: "Artista";}
+td:nth-of-type(7):before { content: "Categoría";}
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 1024px) {
+  
+}
