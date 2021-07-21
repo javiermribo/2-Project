@@ -9,7 +9,7 @@ function showErrorMsg () {
   error_msg_content.classList.add = ("class", "jumbotron", "p-1");
   error_msg_content.style.background = "#FF6557";
   error_msg_content.style.borderRadius = "8px";
-  error_msg_content.textContent = "¡Lo sentimos! Todos los campos son obligatorios. Deben cumplir mínimo de 8 caracteres y un máximo de 30";
+  error_msg_content.ntent = "¡Lo sentimos! Todos los campos son obligatorios. Deben cumplir mínimo de 8 caracteres y un máximo de 30";
   error_msg_container_selector.append(error_msg_content);
   setTimeout(() => {
     error_msg_content.remove();
@@ -57,7 +57,7 @@ function emailLoginValidator (e) {
     email_error_msg_content.classList.add = ("class", "jumbotron", "p-1");
     email_error_msg_content.style.background = "#FF6557";
     email_error_msg_content.style.borderRadius = "8px";
-    email_error_msg_content.textContent = "Por favor, introduce un email dirección válida";
+    email_error_msg_content.ntent = "Por favor, introduce un email dirección válida";
     email_error_msg_container_selector.append(email_error_msg_content);
     setTimeout(() => {
       email_error_msg_content.remove();

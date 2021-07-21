@@ -40,7 +40,7 @@ const showSongInDom = () => {
         const row = document.createElement("tr");
         row.id = song.id;
         row.innerHTML = `
-          <td class="border-top-0">${song.id}</td>
+          <td class="border-0">${song.id}</td>
           <td><img src="${song.image}" width="40px" height="40px"></td>
           <td>${song.title}</td>
           <td>${song.duration}</td>

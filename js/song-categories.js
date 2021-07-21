@@ -9,6 +9,7 @@ function appendSongsByCategory(container, xArraySong) {
   xArraySong.forEach((song) => {
     songArticle = document.createElement("article");
     songArticle.setAttribute("class", "mx-3 text-center", "article-background");
+    songArticle.id = "article-background";
     songArticle.innerHTML = `
     <a href="song-page.html#${song.id}"><img src="${song.image}" width="200px" height="200px" class="img-thumbnail songCoverImg"></a>
     <h5 class="song-card-tile mt-2">${song.title}</h5>

@@ -26,6 +26,7 @@ class User {
       window.location.href = "admin-page.html";
       checkUser(navbarWithUser);
     } else {
+      disabler();
       window.location.href = "index.html";
     }
   }
@@ -111,7 +112,7 @@ const navbarWithUser = (user) => {
             <a class="nav-link text-light" href="index.html">Home</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Sobre nosotros</a>
+            <a class="nav-link text-light" href="about-us.html">Sobre nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="contact-page.html">Contacto</a>
@@ -122,7 +123,7 @@ const navbarWithUser = (user) => {
             Hola, ${user.userName}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="admin-page.html">Panel de admin.</a>
+            <a class="dropdown-item" href="admin-page.html" id="noAdminRole">Panel de admin.</a>
             <button class="dropdown-item" id="logOutUserFn" onclick="logOutUserFn()">Cerrar sesión</button>
           </div>
         </div>
@@ -160,7 +161,7 @@ const noUserNvabar = () => {
             <a class="nav-link text-light" href="index.html">Home</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">Sobre nosotros</a>
+            <a class="nav-link text-light" href="about-us.html">Sobre nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-light" href="contact-page.html">Contacto</a>
@@ -198,4 +199,3 @@ document.addEventListener("DOMContentLoaded", () => {
   checkUser(isUser, noUserNvabar, navbarWithUser);
 });
 
-cc
